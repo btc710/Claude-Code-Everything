@@ -1,0 +1,17 @@
+{
+  "name": "atlas-knowledge-graph",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tenant-scoped knowledge graph for Atlas projects. Confirmed intents, decisions, and resolved follow-ups become triples so subsequent projects start smarter. JSON-backed sketch; production swaps the store for Postgres or a graph DB without changing call sites.",
+  "main": "src/index.js",
+  "bin": {
+    "atlas-graph": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
