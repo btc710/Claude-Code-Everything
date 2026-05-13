@@ -1,0 +1,17 @@
+{
+  "name": "atlas-project-ledger",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Persistent ledger of Atlas projects: scope, estimate, backtest history, follow-ups, and 30/90/180 reviews. JSON-backed sketch; production swaps the store layer for Postgres.",
+  "main": "src/index.js",
+  "bin": {
+    "atlas-ledger": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
