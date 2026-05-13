@@ -6,6 +6,7 @@ Thanks for wanting to contribute! This repo is a community resource for Claude C
 
 - [What We're Looking For](#what-were-looking-for)
 - [Quick Start](#quick-start)
+- [Package Manager Setup](#package-manager-setup)
 - [Contributing Skills](#contributing-skills)
 - [Skill Adaptation Policy](#skill-adaptation-policy)
 - [Contributing Agents](#contributing-agents)
@@ -67,6 +68,25 @@ cp -r skills/my-skill ~/.claude/skills/  # for skills
 # 5. Submit PR
 git add . && git commit -m "feat: add my-skill" && git push -u origin feat/my-contribution
 ```
+
+### Package Manager Setup
+
+`package.json` pins `"packageManager": "yarn@4.9.2"` (yarn berry). The committed `yarn.lock` is in the berry v8 format. If you run a system-installed yarn classic (`yarn 1.x`) in this repo, it will silently rewrite `yarn.lock` in the older v1 format — do **not** commit that downgrade.
+
+To use the right yarn:
+
+```bash
+# Node 16+: enable Corepack once per machine
+corepack enable
+
+# In the repo, yarn will now auto-resolve to 4.9.2
+yarn --version   # → 4.9.2
+yarn install
+```
+
+If your environment can't reach `repo.yarnpkg.com` (sandboxes, restricted CI), use a clone made on an unrestricted machine that has `.yarn/releases/` vendored, or run `npm install` instead — package-manager detection (see README "Package Manager Detection") will pick it up.
+
+If you ever see a large unintended `yarn.lock` diff (~thousands of lines, format header change), stash it (`git stash push -- yarn.lock`) rather than committing.
 
 ---
 
