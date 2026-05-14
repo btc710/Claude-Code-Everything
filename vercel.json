@@ -3,6 +3,5 @@
   "framework": "nextjs",
   "buildCommand": "cd projects/atlas-dashboard && npm install --legacy-peer-deps && npm run build",
   "outputDirectory": "projects/atlas-dashboard/.next",
-  "installCommand": "echo skip-root-install",
-  "ignoreCommand": "echo continue"
+  "installCommand": "echo skip-root-install"
 }
