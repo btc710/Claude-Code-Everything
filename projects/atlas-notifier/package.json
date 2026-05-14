@@ -1,0 +1,17 @@
+{
+  "name": "atlas-notifier",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Notification worker for Atlas: nudges open follow-ups past their unblock-by date and surfaces due 30/90/180 reviews. Consumes the atlas-project-ledger JSON store.",
+  "main": "src/index.js",
+  "bin": {
+    "atlas-notifier": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

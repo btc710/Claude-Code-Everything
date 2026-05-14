@@ -1,0 +1,17 @@
+{
+  "name": "atlas-integrations",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Per-tenant OAuth adapters for the CRMs, calendars, mail, and chat tools an Atlas consult connects. Common interface across HubSpot, Google (Calendar+Gmail), Salesforce, Microsoft 365 (Outlook), and Slack. JSON-backed connection store; production swaps it for Postgres + KMS-encrypted secrets.",
+  "main": "src/index.js",
+  "bin": {
+    "atlas-integrations": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

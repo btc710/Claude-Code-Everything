@@ -1,0 +1,17 @@
+{
+  "name": "atlas-e2e",
+  "version": "0.1.0",
+  "private": true,
+  "description": "End-to-end integration harness for the Atlas stack. Wires model-gateway + project-ledger + (when available) tenants + integrations + notifier + audit into a single demo scenario and proves the full round-trip works.",
+  "main": "src/scenario.js",
+  "bin": {
+    "atlas-e2e": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}

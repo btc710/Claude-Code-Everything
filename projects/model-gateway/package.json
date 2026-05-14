@@ -1,0 +1,18 @@
+{
+  "name": "atlas-model-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tenant-scoped proxy in front of 12 LLM vendors. Holds vendor keys, meters cost, fans out backtest scoring to all 12 slots in parallel.",
+  "main": "src/server.js",
+  "bin": {
+    "atlas-gateway": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node tests/run-all.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
